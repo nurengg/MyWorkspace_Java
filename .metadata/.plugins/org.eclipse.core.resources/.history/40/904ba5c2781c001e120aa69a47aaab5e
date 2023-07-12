@@ -1,0 +1,14 @@
+package basicJavaClass;
+
+public class whileLoop {
+	  public static void main(String[] args) {
+		int mtable = 17;  
+	    int i = 1;
+	    while (i <= 100) {
+	      System.out.println(mtable+" X "+i+" = "+mtable*i);
+	      i++;
+	    }  
+	    
+	   System.out.println("Out of loop...");
+	  }
+	}

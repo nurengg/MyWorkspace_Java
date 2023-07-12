@@ -1,0 +1,47 @@
+package basicJavaClass;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import basicJavaClass.JDBCMySQLTest;
+
+
+public class QueryTable {
+	public static void main(String args[]){
+		Connection conn = null;
+		PreparedStatement preparedStatement = null;
+	
+	/**	String query = "CREATE TABLE `riajava`.`employee` ("
+				 +" `idemployee` INT NOT NULL,"
+				 +" `employeeFirstName` VARCHAR(45) NULL,"
+				 +" `employeeLastName` VARCHAR(45) NULL,"
+				 +" `EmployeeAddress` VARCHAR(255) NULL,"
+				 +"`EmployeePhoneNo` VARCHAR(45) NULL,"
+				 +" PRIMARY KEY (`idemployee`))";
+		
+		**/
+		
+		String query = "INSERT INTO `riajava`.`employee` ("
+				+"`idemployee`, `employeeFirstName`, `employeeLastName`, `EmployeeAddress`, `EmployeePhoneNo`)"
+				+ " VALUES ('001', 'Ram', 'Charan', 'Bengaluru', '999999999');";
+		
+		try{			
+			//get connection
+			conn = JDBCMySQLTest.getConnection();
+			
+			//create preparedStatement
+			preparedStatement = conn.prepareStatement(query);
+			
+			//execute query
+			preparedStatement.execute();
+			
+			//close connection
+			preparedStatement.close();
+			conn.close();
+			
+			//System.out.println("Table created successfully.");
+			System.out.println("Data inserted successfully.");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}	
+}

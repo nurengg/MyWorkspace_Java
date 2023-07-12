@@ -1,0 +1,30 @@
+/** 
+ * 
+ */
+package basicJavaClass;
+
+/**
+ * @author RIA
+ *
+ */
+public class myFirstProgram {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		System.out.println("Printing the line using println keyword - Line 1");
+		System.out.print("Printing the line \n using print keyword - Line 2\n");
+		System.out.println("Printing the line using println keyword - Line 3");
+		System.out.println("Printing the line using \\n keyword - Line 4");
+		System.out.println(32313);
+		System.out.print("Below are the sum of 20 and 10 - ");
+		System.out.println(20+10);
+		System.out.print("Below are the sub of 20 and 10 - "+"20-10");
+
+	}
+
+}
